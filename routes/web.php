@@ -1,9 +1,7 @@
 <?php
 
 use App\Http\Controllers\HomeController;
-use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
-use Inertia\Inertia;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,4 +16,4 @@ use Inertia\Inertia;
 
 Route::get('/', HomeController::class . '@home')->name('home');
 
-Route::get('/contacto', HomeController::class . '@contact')->name('contacto');
+Route::get('/contact', HomeController::class . '@contact')->name('contact');

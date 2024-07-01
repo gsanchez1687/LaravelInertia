@@ -8,7 +8,6 @@
     <Counter />
     <Team />
     <Testimonials />
-   
 </template>
 
 <script setup lang="ts">
