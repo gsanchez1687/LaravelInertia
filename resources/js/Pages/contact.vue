@@ -41,20 +41,19 @@
                                 </div>
                                 <div class="contact-page__call-email-content">
                                     <h4>
-                                        <a href="tel:9200368090" class="contact-page__call-number">+92 (003) 68-090</a>
+                                        <a href="tel:9200368090" class="contact-page__call-number">{{ config.phone_number }}</a>
                                         <a href="mailto:needhelp@company.com"
-                                            class="contact-page__email">needhelp@company.com</a>
+                                            class="contact-page__email">{{ config.email }}</a>
                                     </h4>
                                 </div>
                             </div>
-                            <p class="contact-page__location-text">30 Commecial Broklyn Road <br> Fratton, Australia</p>
+                            <p class="contact-page__location-text">{{ config.address }}</p>
                         </div>
                     </div>
                     <div class="col-xl-8 col-lg-7">
                         <div class="contact-page__right">
                             <div class="contact-page__form">
-                                <form action="assets/inc/sendemail.php" class="comment-one__form contact-form-validated"
-                                    novalidate="novalidate">
+                                <form action="assets/inc/sendemail.php" class="comment-one__form contact-form-validated">
                                     <div class="row">
                                         <div class="col-xl-6">
                                             <div class="comment-form__input-box">
@@ -110,7 +109,7 @@
                                     <i class="fas fa-phone"></i>
                                 </div>
                                 <div class="cta-one__call-number">
-                                    <a href="tel:9200368090">+92 (003) 68-090</a>
+                                    <a href="tel:9200368090">11</a>
                                     <p>Call to Our Experts</p>
                                 </div>
                             </div>
@@ -139,7 +138,11 @@
 </template>
 
 <script setup lang="ts">
+
+import { ref } from 'vue';
 import { Head } from '@inertiajs/vue3';
 
+
+defineProps({ config: Object })
 
 </script>

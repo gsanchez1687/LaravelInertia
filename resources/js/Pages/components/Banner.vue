@@ -17,7 +17,7 @@
                     }}'>
                     <div class="swiper-wrapper">
     
-                        <div v-for="data in banners" class="swiper-slide">
+                        <div v-for="data in banners" :key="data.id" class="swiper-slide">
                             <div class="image-layer" style="background-image: url('/public/images/banner/{{ data.image }}');"></div>
                             <!-- /.image-layer -->
     
