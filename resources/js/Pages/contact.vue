@@ -8,7 +8,7 @@
             <div class="container">
                 <div class="page-header__inner">
                     <ul class="thm-breadcrumb list-unstyled">
-                        <li><a href="index.html">Home</a></li>
+                        <li><Link href="/">Home</Link></li>
                         <li><span>/</span></li>
                         <li>Contact</li>
                     </ul>
@@ -138,10 +138,9 @@
 </template>
 
 <script setup lang="ts">
-
-import { ref } from 'vue';
+import { Link } from '@inertiajs/vue3'
+import { defineProps } from 'vue';
 import { Head } from '@inertiajs/vue3';
-
 
 defineProps({ config: Object })
 
