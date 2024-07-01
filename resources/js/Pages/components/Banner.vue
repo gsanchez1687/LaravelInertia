@@ -17,87 +17,28 @@
                     }}'>
                     <div class="swiper-wrapper">
     
-                        <div class="swiper-slide">
-                            <div class="image-layer"
-                                style="background-image: url(assets/images/backgrounds/main-slider-1-1.jpg);">
-                            </div>
+                        <div v-for="data in banners" class="swiper-slide">
+                            <div class="image-layer" style="background-image: url('/public/images/banner/{{ data.image }}');"></div>
                             <!-- /.image-layer -->
     
                             <div class="main-slider-shape-1 float-bob-x">
-                                <img src="assets/images/shapes/main-slider-shape-1.png" alt="">
+                                <img src="public/images/images/shapes/main-slider-shape-1.png" alt="">
                             </div>
     
                             <div class="container">
                                 <div class="row">
                                     <div class="col-xl-12">
-                                        <div class="main-slider__content">
-                                            <h2 class="main-slider__title">Insurance <br> for the better <br> family
-                                                <span>life.</span></h2>
-                                            <p class="main-slider__text">Phasellus condimentum laoreet turpis, ut tincid
-                                                sodales <br> in. Integer leo arcu, mollis sit amet tempor.</p>
+                                        <div  class="main-slider__content">
+                                            <h2 class="main-slider__title">{{ data.title }}</h2>
+                                            <p class="main-slider__text">{{ data.description }}</p>
                                             <div class="main-slider__btn-box">
-                                                <a href="about.html" class="thm-btn main-slider__btn">Let’s Get Started</a>
+                                                <a target="_blank" :href="data.link" class="thm-btn main-slider__btn">Let’s Get Started</a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-    
-                        <div class="swiper-slide">
-                            <div class="image-layer"
-                                style="background-image: url(assets/images/backgrounds/main-slider-1-2.jpg);">
-                            </div>
-                            <!-- /.image-layer -->
-    
-                            <div class="main-slider-shape-1 float-bob-x">
-                                <img src="assets/images/shapes/main-slider-shape-1.png" alt="">
-                            </div>
-    
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-xl-12">
-                                        <div class="main-slider__content">
-                                            <h2 class="main-slider__title">Insurance <br> for the better <br> family
-                                                <span>life.</span></h2>
-                                            <p class="main-slider__text">Phasellus condimentum laoreet turpis, ut tincid
-                                                sodales <br> in. Integer leo arcu, mollis sit amet tempor.</p>
-                                            <div class="main-slider__btn-box">
-                                                <a href="about.html" class="thm-btn main-slider__btn">Let’s Get Started</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-    
-                        <div class="swiper-slide">
-                            <div class="image-layer"
-                                style="background-image: url(assets/images/backgrounds/main-slider-1-3.jpg);">
-                            </div>
-                            <!-- /.image-layer -->
-    
-                            <div class="main-slider-shape-1 float-bob-x">
-                                <img src="assets/images/shapes/main-slider-shape-1.png" alt="">
-                            </div>
-    
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-xl-12">
-                                        <div class="main-slider__content">
-                                            <h2 class="main-slider__title">Insurance <br> for the better <br> family
-                                                <span>life.</span></h2>
-                                            <p class="main-slider__text">Phasellus condimentum laoreet turpis, ut tincid
-                                                sodales <br> in. Integer leo arcu, mollis sit amet tempor.</p>
-                                            <div class="main-slider__btn-box">
-                                                <a href="about.html" class="thm-btn main-slider__btn">Let’s Get Started</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-    
                     </div>
     
                     <!-- If we need navigation buttons -->
@@ -115,7 +56,13 @@
     <!--Main Slider End-->
 </template>
 
-
 <script setup lang="ts">
+import { defineProps } from 'vue';
+
+type propTypes = {
+  banners: Array<any>;
+};
+
+defineProps<propTypes>();
 
 </script>
