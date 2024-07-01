@@ -19,4 +19,8 @@ class HomeController extends Controller
             'config' => $config,
         ]);
     }
+
+    public function contact(){
+        return Inertia::render('contact.contact');
+    }
 }

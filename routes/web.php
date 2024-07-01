@@ -17,3 +17,5 @@ use Inertia\Inertia;
 */
 
 Route::get('/', HomeController::class . '@home')->name('home');
+
+Route::get('/contacto', HomeController::class . '@contact')->name('contacto');
