@@ -1,4 +1,5 @@
 <template>
+    <Head title="Home" />
     <Banner :banners="props.banners" />
     <Feature />
     <About />
