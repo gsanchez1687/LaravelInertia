@@ -1,5 +1,13 @@
 <template>
     <Banner :banners="props.banners" />
+    <Feature />
+    <About />
+    <Services />
+    <Choose />
+    <Insurance />
+    <Counter />
+    <Team />
+    <Testimonials />
    
 </template>
 
@@ -19,7 +27,8 @@ import { ref, onMounted } from 'vue';
 
 // Define una interfaz para las props si estás usando TypeScript
 interface Props {
-  banners: Array<any>; // Ajusta el tipo según tus datos
+  banners: Array<any>;
+  config: Array<any>;
 }
 
 // Define las props
